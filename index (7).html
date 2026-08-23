@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>West Washing Co. | Pressure Washing in Carrollton, GA</title>
+<meta name="description" content="Locally owned pressure washing, window washing, and trash can washing in Carrollton, GA and West Georgia. Free quotes from Mason Harrison and Hayden Brooks.">
+<style>
+  :root{
+    --navy:#0b3a52;
+    --deep:#082a3d;
+    --blue:#1f7a9c;
+    --aqua:#3fb8c9;
+    --foam:#eef6f8;
+    --white:#ffffff;
+    --ink:#12232b;
+    --muted:#5c7480;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Segoe UI',Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+  }
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--navy);
+    color:var(--white);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;}
+  .brand span.drop{font-size:1.3rem;}
+  .nav-links{display:flex;gap:28px;font-size:0.95rem;}
+  .nav-links a:hover{color:var(--aqua);}
+  .nav-cta{display:flex;align-items:center;gap:16px;}
+  .btn{
+    display:inline-block;padding:10px 20px;border-radius:6px;font-weight:600;font-size:0.95rem;
+    background:var(--aqua);color:var(--deep);transition:transform .15s ease, background .15s ease;
+  }
+  .btn:hover{background:#59c9d8;transform:translateY(-1px);}
+  .btn.outline{background:transparent;border:1px solid rgba(255,255,255,.5);color:var(--white);}
+  .btn.outline:hover{background:rgba(255,255,255,.1);}
+  .call-link{font-size:0.9rem;color:var(--foam);}
+  .menu-toggle{display:none;font-size:1.5rem;background:none;border:none;color:var(--white);cursor:pointer;}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(160deg,var(--deep) 0%, var(--navy) 55%, var(--blue) 100%);
+    color:var(--white);
+    padding:90px 24px 100px;
+    text-align:center;
+  }
+  .eyebrow{
+    display:inline-block;font-size:0.85rem;letter-spacing:.03em;
+    background:rgba(255,255,255,.1);padding:6px 14px;border-radius:20px;margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,5vw,3.4rem);
+    font-weight:800;line-height:1.15;max-width:820px;margin:0 auto 20px;
+  }
+  .hero p{
+    max-width:600px;margin:0 auto 32px;color:#cfe6ee;font-size:1.05rem;
+  }
+  .hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:26px;}
+  .trust{color:#a9d4de;font-size:0.9rem;}
+
+  /* Services */
+  section{padding:80px 24px;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 50px;}
+  .section-head .eyebrow{background:var(--foam);color:var(--blue);}
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:10px 0 12px;color:var(--deep);}
+  .section-head p{color:var(--muted);}
+
+  .services{background:var(--foam);}
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;max-width:1100px;margin:0 auto;}
+  .card{
+    background:var(--white);border-radius:12px;padding:32px 28px;
+    box-shadow:0 6px 20px rgba(11,58,82,.08);
+  }
+  .card h3{color:var(--deep);margin-bottom:10px;font-size:1.25rem;}
+  .card p{color:var(--muted);margin-bottom:16px;font-size:0.95rem;}
+  .card ul{list-style:none;color:var(--ink);font-size:0.92rem;}
+  .card li{padding-left:20px;position:relative;margin-bottom:6px;}
+  .card li::before{content:"✓";position:absolute;left:0;color:var(--aqua);font-weight:700;}
+
+  /* Why us */
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;max-width:1100px;margin:0 auto;}
+  .why-item{text-align:center;padding:20px;}
+  .why-item .icon{font-size:1.8rem;margin-bottom:14px;}
+  .why-item h4{color:var(--deep);margin-bottom:8px;font-size:1.05rem;}
+  .why-item p{color:var(--muted);font-size:0.9rem;}
+
+  /* Story */
+  .story{background:var(--foam);}
+  .owners{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;max-width:900px;margin:0 auto;}
+  .owner-card{background:var(--white);border-radius:12px;padding:30px;text-align:center;box-shadow:0 6px 20px rgba(11,58,82,.08);}
+  .owner-card .avatar{
+    width:64px;height:64px;border-radius:50%;background:var(--navy);color:var(--white);
+    display:flex;align-items:center;justify-content:center;font-weight:700;margin:0 auto 14px;
+  }
+  .owner-card h4{color:var(--deep);margin-bottom:2px;}
+  .owner-card .role{color:var(--aqua);font-size:0.85rem;font-weight:600;margin-bottom:10px;}
+  .owner-card p{color:var(--muted);font-size:0.9rem;}
+
+  /* Service area */
+  .area-list{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:800px;margin:0 auto;}
+  .area-pill{
+    background:var(--foam);color:var(--navy);padding:8px 16px;border-radius:20px;font-size:0.9rem;font-weight:600;
+  }
+
+  /* Quote */
+  .quote{background:linear-gradient(160deg,var(--navy),var(--deep));color:var(--white);}
+  .quote .section-head h2{color:var(--white);}
+  .quote .section-head p{color:#cfe6ee;}
+  .quote-layout{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;max-width:1000px;margin:0 auto;align-items:start;}
+  .contact-block{display:flex;flex-direction:column;gap:24px;}
+  .contact-item{display:flex;gap:14px;align-items:flex-start;}
+  .contact-item .icon{font-size:1.3rem;}
+  .contact-item h5{font-size:0.85rem;color:#a9d4de;margin-bottom:4px;}
+  .contact-item p{color:var(--white);font-weight:600;}
+  form{background:var(--white);border-radius:12px;padding:32px;color:var(--ink);}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  .form-row.full{grid-template-columns:1fr;}
+  label{font-size:0.82rem;font-weight:600;color:var(--navy);display:block;margin-bottom:5px;}
+  input,select,textarea{
+    width:100%;padding:10px 12px;border:1px solid #d6e4e8;border-radius:6px;font-size:0.95rem;font-family:inherit;
+  }
+  textarea{resize:vertical;min-height:90px;}
+  .form-note{font-size:0.78rem;color:var(--muted);margin-top:10px;}
+  form .btn{width:100%;text-align:center;margin-top:6px;border:none;cursor:pointer;font-size:1rem;padding:13px;}
+
+  /* Footer */
+  footer{background:var(--deep);color:#a9d4de;padding:60px 24px 30px;}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;max-width:1100px;margin:0 auto 40px;}
+  .footer-brand{color:var(--white);font-weight:700;font-size:1.1rem;margin-bottom:10px;display:flex;gap:8px;align-items:center;}
+  footer h5{color:var(--white);font-size:0.9rem;margin-bottom:14px;letter-spacing:.03em;}
+  footer ul{list-style:none;font-size:0.9rem;}
+  footer li{margin-bottom:8px;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;text-align:center;font-size:0.82rem;max-width:1100px;margin:0 auto;}
+
+  @media (max-width:800px){
+    .nav-links,.nav-cta .call-link{display:none;}
+    .menu-toggle{display:block;}
+    .quote-layout{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand"><span class="drop">💧</span> West Washing Co.</div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#story">Our Story</a>
+      <a href="#area">Service Area</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="call-link" href="tel:4702480227">📞 (470) 248-0227</a>
+      <a class="btn" href="#quote">Free Quote</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">📍 Proudly serving Carrollton, GA &amp; West Georgia</span>
+    <h1>A cleaner home starts at the curb.</h1>
+    <p>West Washing Company brings back the shine to your driveways, siding, windows, and even your trash cans. Locally owned by Mason Harrison and Hayden Brooks. Done right, every time.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#quote">Get Your Free Quote</a>
+      <a class="btn outline" href="#services">See Our Services</a>
+    </div>
+    <div class="trust">★★★★★ Trusted by neighbors across Carroll County</div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-head">
+    <span class="eyebrow">What We Do</span>
+    <h2>Exterior cleaning that makes the whole place shine</h2>
+    <p>Three specialties, one dependable local crew. Bundle services and save.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Pressure Washing</h3>
+      <p>Driveways, sidewalks, patios, decks, and fences blasted clean. We lift years of dirt, mildew, and grime to restore surfaces to like-new.</p>
+      <ul>
+        <li>Driveways &amp; concrete</li>
+        <li>Patios &amp; decks</li>
+        <li>House soft washing</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Window Washing</h3>
+      <p>Streak-free, crystal-clear windows inside and out. Let more light in and see the difference a professional clean makes.</p>
+      <ul>
+        <li>Interior &amp; exterior glass</li>
+        <li>Screens &amp; tracks</li>
+        <li>Streak-free finish</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Trash Can Washing</h3>
+      <p>Say goodbye to the smell. We sanitize, deodorize, and pressure-clean your curbside bins so they look and smell fresh again.</p>
+      <ul>
+        <li>Sanitized &amp; deodorized</li>
+        <li>One-time or recurring</li>
+        <li>Eco-friendly rinse</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="why-us">
+  <div class="section-head">
+    <h2>Big-company results with small-town care</h2>
+    <p>We started West Washing Company because we love seeing the moment a customer's face lights up at a spotless driveway. That pride shows up in every job we take.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="icon">🤝</div>
+      <h4>Locally Owned</h4>
+      <p>Born and raised in Carrollton. When you hire us, you're supporting neighbors who care about this community.</p>
+    </div>
+    <div class="why-item">
+      <div class="icon">🛡</div>
+      <h4>Satisfaction Guaranteed</h4>
+      <p>If you're not thrilled with the results, we'll make it right. Your happiness is how we grow.</p>
+    </div>
+    <div class="why-item">
+      <div class="icon">⏱</div>
+      <h4>On-Time &amp; Reliable</h4>
+      <p>We show up when we say we will, treat your property with respect, and clean up when we're done.</p>
+    </div>
+    <div class="why-item">
+      <div class="icon">🌿</div>
+      <h4>Safe &amp; Eco-Friendly</h4>
+      <p>Biodegradable solutions and the right pressure for every surface, so nothing gets damaged.</p>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="section-head">
+    <span class="eyebrow">Meet the Owners</span>
+    <h2>Two hometown guys who take pride in the work</h2>
+    <p>West Washing Company is built on hard work, honesty, and a genuine love for our Carrollton community.</p>
+  </div>
+  <div class="owners">
+    <div class="owner-card">
+      <div class="avatar">MH</div>
+      <h4>Mason Harrison</h4>
+      <div class="role">Co-Owner</div>
+      <p>Handles the physical pressure washing work as well as trash can and window jobs. Runs the equipment and gets every job done right on-site.</p>
+    </div>
+    <div class="owner-card">
+      <div class="avatar">HB</div>
+      <h4>Hayden Brooks</h4>
+      <div class="role">Co-Owner</div>
+      <p>Manages scheduling, quotes, and customer communication. Keeps jobs organized and makes sure every client gets taken care of.</p>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="section-head">
+    <span class="eyebrow">Where We Work</span>
+    <h2>Serving Carroll County &amp; the surrounding area</h2>
+    <p>Based in Carrollton, GA, we travel throughout West Georgia. Not sure if we reach you? Just ask, we're happy to help.</p>
+  </div>
+  <div class="area-list">
+    <span class="area-pill">📍 Carrollton</span>
+    <span class="area-pill">📍 Villa Rica</span>
+    <span class="area-pill">📍 Temple</span>
+    <span class="area-pill">📍 Bowdon</span>
+    <span class="area-pill">📍 Whitesburg</span>
+    <span class="area-pill">📍 Bremen</span>
+    <span class="area-pill">📍 Mount Zion</span>
+    <span class="area-pill">📍 Roopville</span>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="section-head">
+    <span class="eyebrow">Get Started</span>
+    <h2>Request your free, no-pressure quote</h2>
+    <p>Tell us a little about your project and we'll get back to you quickly with a fair, upfront price. No obligation.</p>
+  </div>
+  <div class="quote-layout">
+    <div class="contact-block">
+      <div class="contact-item">
+        <div class="icon">📞</div>
+        <div><h5>Call or text</h5><p>(470) 248-0227</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">✉</div>
+        <div><h5>Email us</h5><p>WestWashCo@gmail.com</p></div>
+      </div>
+    </div>
+    <form action="https://formspree.io/f/WestWashCo@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New quote request from West Washing Co. website">
+      <div class="form-row">
+        <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required></div>
+        <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="(470) 000-0000" required></div>
+      </div>
+      <div class="form-row">
+        <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com" required></div>
+        <div>
+          <label for="service">Service needed</label>
+          <select id="service" name="service">
+            <option>Select a service</option>
+            <option>Pressure Washing</option>
+            <option>Window Washing</option>
+            <option>Trash Can Washing</option>
+            <option>Multiple services</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row full">
+        <div><label for="details">Tell us about the job</label><textarea id="details" name="details" placeholder="Describe the surfaces, size, or anything else that helps us quote fairly."></textarea></div>
+      </div>
+      <button type="submit" class="btn">Request My Free Quote</button>
+      <p class="form-note">Submissions go straight to WestWashCo@gmail.com. First submission needs a one-time confirmation click in your inbox.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">💧 West Washing Co.</div>
+      <p>Locally owned exterior cleaning in Carrollton, GA. Pressure washing, window washing, and trash can washing done right.</p>
+    </div>
+    <div>
+      <h5>Services</h5>
+      <ul>
+        <li>Pressure Washing</li>
+        <li>Window Washing</li>
+        <li>Trash Can Washing</li>
+      </ul>
+    </div>
+    <div>
+      <h5>Get in Touch</h5>
+      <ul>
+        <li>📞 (470) 248-0227</li>
+        <li>✉ WestWashCo@gmail.com</li>
+        <li>📍 Carrollton, GA</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 West Washing Company. All rights reserved. Owned by Mason Harrison &amp; Hayden Brooks</div>
+</footer>
+
+</body>
+</html>
