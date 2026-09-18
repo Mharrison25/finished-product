@@ -341,20 +341,6 @@
       <div class="form-row">
         <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com" required></div>
         <div>
-          <div class="field">
-        <label for="address">Service address</label>
-        <input id="address" name="address" type="text" placeholder="123 Main St" autocomplete="street-address" required>
-      </div>
-      <div class="form-row">
-        <div class="field">
-          <label for="city">City</label>
-          <input id="city" name="city" type="text" placeholder="Carrollton" autocomplete="address-level2" required>
-        </div>
-        <div class="field">
-          <label for="zip">Zip code</label>
-          <input id="zip" name="zip" type="text" placeholder="30117" inputmode="numeric" maxlength="5" autocomplete="postal-code" required>
-        </div>
-      </div>
           <label for="service">Service needed</label>
           <select id="service" name="service">
             <option>Select a service</option>
@@ -365,6 +351,13 @@
             <option>Other</option>
           </select>
         </div>
+      </div>
+      <div class="form-row full">
+        <div><label for="address">Service address</label><input id="address" name="address" type="text" placeholder="123 Main St" autocomplete="street-address" required></div>
+      </div>
+      <div class="form-row">
+        <div><label for="city">City</label><input id="city" name="city" type="text" placeholder="Carrollton" autocomplete="address-level2" required></div>
+        <div><label for="zip">Zip code</label><input id="zip" name="zip" type="text" placeholder="30117" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" autocomplete="postal-code" required></div>
       </div>
       <div class="form-row full">
         <div><label for="details">Tell us about the job</label><textarea id="details" name="details" placeholder="Describe the surfaces, size, or anything else that helps us quote fairly."></textarea></div>
